@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+	padding: 0px;
+	font-family: Calibri;
+	background-color: green;
+	
+}
+
+a:link {
+	text-decoration: none;
+}
+
+.header {
+	width: 100%;
+	height: 775px;
+	position: relative;
+}
+
+.logo img{
+	height: 80px;
+}
+
+nav {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 0px 30px;
+	background-color: white;
+	z-index: 1;
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	
+}
+
+nav ul {
+	list-style-type: none;
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+
+nav ul li a {
+	height: 40px;
+	line-height: 43px;
+	margin: 8px;
+	padding: 0px 10px;
+	display: flex;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	color: black;
+	letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+	border-radius: 5px;
+	background-color: green;
+	color: white;
+	
+}
+
+.teachersProfile{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 90%;
+}
+
+.teachersProfile-image{
+	width: 500px;
+	height: 400px;
+	margin: 20px;
+}
+
+.teachersProfile-image img{
+	width: 500px;
+	height: 400px;
+	object-fit: contain;
+	object-position: center;
+}
+
+.teachersProfile-text{
+	width: 500px;
+	margin: 20px;
+	color: white;
+}
+
+.teachersProfile-text h1{
+	font-size: 3.5rem;
+	line-height: 55px;
+	letter-spacing: 1px;
+	font-weight: 700;
+	margin: 0px;
+}
+
+.teachersProfile-text p{
+	font-size: 1rem;
+}
+
+.box-containers{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 20px 30px;
+}
+
+.box{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 220px;
+	height: 300px;
+	text-align: center;
+	background-color: grey;
+	border-radius: 10px;
+	margin: 20px;
+	flex-grow: 1;
+	float: left;
+}
+
+.box img{
+	height: 120px;
+	margin: 10px;
+}
+
+.box font{
+	font-size: 1.5rem;
+	color: white;
+	letter-spacing: 1px;
+	font-weight: 700;
+}
+
+.box p{
+	font-size: 1rem;
+	color: white;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	max-width: 500px;
+}
+
+footer p {
+	color: white;
+}
+
+footer {
+	width: 100%;
+	text-align: center;
+	padding: 0px 5%;
+	border-top: 1px solid white;
+}
+
+@media(max-width:1100px) {	
+	
+	nav {
+		justify-content: space-between;
+		height: 65px;
+	}
+	
+	.menu {
+		display: none;
+		position: absolute;
+		top: 65px;
+		left: 0px;
+		background-color: white;
+		border-bottom: 4px solid grey;
+		width: 100%;
+	}
+	
+	.menu li {
+		width: 100%;
+	}
+	
+	nav .menu li a {
+		width: 100%;
+		height: 48px;
+		justify-content: center;
+		align-items: center;
+		margin: 0px;
+		padding: 25px;
+		border: 1px solid;
+	}
+	
+	nav .menu-icon {
+		cursor: pointer;
+		float: right;
+		padding: 28px 28px;
+		position: relative;
+		user-select: none;
+	}
+	
+	nav .menu-icon .nav-icon {
+		background-color: grey;
+		display: block;
+		height: 2px;
+		position: relative;
+		width: 18px;
+	}
+	
+	nav .menu-icon .nav-icon:before,
+	nav .menu-icon .nav-icon:after {
+		background: black;
+		content: "";
+		display: block;
+		height: 100%;
+		position: absolute;
+		width: 100%;
+	}
+	
+	nav .menu-icon .nav-icon:before {
+		top: 5px;
+	}
+	
+	nav .menu-icon .nav-icon:after {
+		top: -5px;
+	}
+	
+	nav .menu-btn:checked ~ .menu-icon .nav-icon {
+		background: transparent;
+	}
+	
+	nav .menu-btn:checked ~ .menu-icon .nav-icon:before {
+		transform: rotate(-45deg);
+		top: 0;
+	}
+	
+	nav .menu-btn:checked ~ .menu-icon .nav-icon:after {
+		transform: rotate(45deg);
+		top: 0;
+	}
+	
+	nav .menu-btn{
+		display: none;
+	}
+	
+	nav .menu-btn:checked ~ .menu {
+		display: block;
+	}
+	
+	.logo {
+		height: 95px;
+	}
+	
+	.teachersProfile-image {
+		display: none;
+	}
+	
+	.teachersProfile-text {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		flex-direction: column;
+		height: 45vh;
+		margin: 0px;
+		margin-top: -120px;
+	}
+	
+	.teachersProfile-text h1 {
+		text-align: center;
+		padding: 0px 20px;
+		font-size: 2.5rem;
+	}
+	
+	.teachersProfile-text p {
+		text-align: center;		
+	}
+	
+	.box img {
+		height: 100px;
+	}
+}
